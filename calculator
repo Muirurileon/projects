@@ -1,0 +1,27 @@
+python
+def calculator():
+    print("Simple Calculator")
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            op = input("Enter operation (+ - * /): ")
+            num2 = float(input("Enter second number: "))
+
+            if op == '+':
+                print("Result:", num1 + num2)
+            elif op == '-':
+                print("Result:", num1 - num2)
+            elif op == '*':
+                print("Result:", num1 * num2)
+            elif op == '/':
+                print("Result:", num1 / num2)
+            else:
+                print("Invalid operator")
+  
+        except Exception as e:
+            print("Error:", e)
+
+        again = input("Do another? (y/n): ")
+        if again.lower() != 'y':
+            break
+
